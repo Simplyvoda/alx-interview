@@ -18,7 +18,7 @@ regex_pattern = r'''
 pattern = re.compile(regex_pattern, re.VERBOSE)
 
 
-def input_checker():
+def main():
   line_count = 0
   status_code = {}
   total_size = 0
@@ -32,8 +32,8 @@ def input_checker():
 
     line_count += 1  # increase line count variable to perform print at 10counts
     arguments = line.strip().split()
-    total_size += int(arguments[4])
-    code = arguments[3]
+    total_size += int(arguments[5])
+    code = arguments[4]
 
     if code in status_code:
       status_code[code] += 1
@@ -45,4 +45,6 @@ def input_checker():
       for status, count in status_code.items():
         print(f"{status}: {count}")
       line_count = 0  # reset line count after 10th line
-  return
+
+if __name__ == '__main__':
+    main()
