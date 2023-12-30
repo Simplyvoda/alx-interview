@@ -21,12 +21,12 @@ def main():
 
   try:
     for line in sys.stdin:
-      line = line.strip()  #remove newline character
-      match = re.fullmatch(pattern, line)  #check for match
+      line = line.strip()  # remove newline character
+      match = re.fullmatch(pattern, line)  # check for match
       if not match:
         continue  # Move to the next line if there's no match
 
-      line_count += 1  # increase line count variable to perform print at 10counts
+      line_count += 1  # increase line count to perform print at 10counts
       arguments = line.strip().split(" ")
       total_size += int(arguments[-1])
       code = arguments[-2]
