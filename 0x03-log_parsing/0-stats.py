@@ -21,8 +21,8 @@ def main():
 
   try:
     for line in sys.stdin:
-      line = line.strip()  #remove newline character
-      match = re.fullmatch(pattern, line)  #check for match
+      line = line.strip()  # remove newline character
+      match = re.fullmatch(pattern, line)  # check for match
       if not match:
         continue  # Move to the next line if there's no match
 
